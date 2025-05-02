@@ -20,13 +20,13 @@ import com.google.gson.JsonObject;
 
 public class AppointmentScheduler {
 
-    // URL base de la API. Puedes actualizar esta URL según la API real o el servicio mock.
+
     private final String baseApiUrl = "http://localhost:8080/api";
 
     public String scheduleAppointment(String patient, String doctor, String specialty, String date, String time)
             throws IOException, InterruptedException {
 
-        // Construcción del objeto JSON con los datos de la cita.
+       
         JsonObject appointmentRequest = new JsonObject();
         appointmentRequest.addProperty("patient", patient);
         appointmentRequest.addProperty("doctor", doctor);
@@ -47,7 +47,7 @@ public class AppointmentScheduler {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        // Se espera que la API retorne un JSON con un campo "message".
+       
         Gson gson = new Gson();
         JsonObject responseJson = gson.fromJson(response.body(), JsonObject.class);
         return responseJson.get("message").getAsString();
