@@ -5,7 +5,7 @@
 
 /**
  *
- * @author alumnog
+ * @author alumno
  */
 package com.myappointmentapp;
 
