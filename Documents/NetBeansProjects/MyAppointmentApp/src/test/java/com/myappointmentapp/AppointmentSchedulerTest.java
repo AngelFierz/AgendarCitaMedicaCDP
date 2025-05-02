@@ -26,7 +26,7 @@ public class AppointmentSchedulerTest {
         AppointmentScheduler scheduler = new AppointmentScheduler();
         
         // Datos del caso de prueba
-        String patient = "Juan Pérez";
+        String patient = "Juan Pérez"; 
         String doctor = "Dr. Carlos Eduardo";
         String specialty = "Cardiology";
         String date = "2025-04-01";
