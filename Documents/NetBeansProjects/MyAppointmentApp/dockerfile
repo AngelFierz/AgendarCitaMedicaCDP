@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copiar el JAR generado al contenedor
-COPY target/MyAppointmentApp.jar /app/MyAppointmentApp.jar
+COPY target/MyAppointmentApp-1.0-SNAPSHOT.jar /app/MyAppointmentApp.jar
 
 # Exponer el puerto en el que la aplicación escuchará
 EXPOSE 8080
