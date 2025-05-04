@@ -1,0 +1,14 @@
+# Usar la imagen base de OpenJDK 11
+FROM openjdk:11-jre-slim
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el JAR generado al contenedor
+COPY target/MyAppointmentApp.jar /app/MyAppointmentApp.jar
+
+# Exponer el puerto en el que la aplicación escuchará
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación
+CMD ["java", "-jar", "MyAppointmentApp.jar"]

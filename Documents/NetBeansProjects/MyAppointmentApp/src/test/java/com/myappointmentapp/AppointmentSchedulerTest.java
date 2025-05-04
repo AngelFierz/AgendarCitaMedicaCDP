@@ -1,5 +1,3 @@
-package com.myappointmentapp;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -12,6 +10,9 @@ package com.myappointmentapp;
 package com.myappointmentapp;
 
 import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import static junit.framework.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class AppointmentSchedulerTest {
