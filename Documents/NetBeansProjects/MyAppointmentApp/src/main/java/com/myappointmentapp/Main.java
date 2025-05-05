@@ -17,6 +17,25 @@ public class Main {
         AppointmentScheduler scheduler = new AppointmentScheduler();
         Scanner scanner = new Scanner(System.in);
 
+        String usuario;
+        
+        // 🔹 Registro obligatorio antes de cualquier acción
+        System.out.print("Ingrese su nombre de usuario: ");
+        usuario = scanner.nextLine();
+
+        while (!scheduler.autenticarPaciente(usuario)) {
+            System.out.println("Usuario no registrado, Registrate ahora");
+            System.out.print(" Edad: ");
+            int edad = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Teléfono: ");
+            String telefono = scanner.nextLine();
+            scheduler.registrarPaciente(usuario, edad, telefono);
+            System.out.println("Usuario registrado correctamente!");
+        }
+
+        System.out.println("Bienvenido, " + usuario + "!");
+
         while (true) {
             System.out.println("\nOpciones:");
             System.out.println("1 registrar paciente");
@@ -25,7 +44,7 @@ public class Main {
             System.out.println("0 Salir");
             System.out.print("!! Elige una opción: ");
             int opcion = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -40,9 +59,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print(" Nombre del paciente: ");
-                    String paciente = scanner.nextLine();
-                    System.out.print("Nombre del doctor: ");
+                    System.out.print(" Nombre del doctor: ");
                     String doctor = scanner.nextLine();
                     System.out.print(" Especialidad: ");
                     String especialidad = scanner.nextLine();
@@ -50,7 +67,7 @@ public class Main {
                     String fecha = scanner.nextLine();
                     System.out.print("Hora (HH:MM): ");
                     String hora = scanner.nextLine();
-                    System.out.println(scheduler.scheduleAppointment(paciente, doctor, especialidad, fecha, hora));
+                    System.out.println(scheduler.scheduleAppointment(usuario, doctor, especialidad, fecha, hora));
                     break;
 
                 case 3:

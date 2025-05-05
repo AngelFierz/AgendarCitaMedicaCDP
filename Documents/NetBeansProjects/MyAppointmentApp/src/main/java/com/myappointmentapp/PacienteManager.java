@@ -16,7 +16,7 @@ public class PacienteManager {
 
     public void registrarPaciente(String nombre, int edad, String telefono) {
         pacientes.add(new Paciente(nombre, edad, telefono));
-        System.out.println("✅ Paciente registrado: " + nombre);
+        System.out.println("Paciente registrado: " + nombre);
     }
 
     public boolean autenticarPaciente(String nombre) {
@@ -24,7 +24,7 @@ public class PacienteManager {
     }
 
     public void mostrarPacientes() {
-        System.out.println("🩺 Pacientes registrados:");
+        System.out.println("Pacientes registrados:");
         for (Paciente paciente : pacientes) {
             System.out.println(paciente);
         }
