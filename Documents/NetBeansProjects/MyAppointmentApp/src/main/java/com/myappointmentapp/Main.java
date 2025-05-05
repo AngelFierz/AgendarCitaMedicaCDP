@@ -19,8 +19,8 @@ public class Main {
 
         while (true) {
             System.out.println("\nOpciones:");
-            System.out.println("1️ registrar paciente");
-            System.out.println("2️ Agendar Cita");
+            System.out.println("1 registrar paciente");
+            System.out.println("2 Agendar Cita");
             System.out.println("3 Mostrar datos actuales");
             System.out.println("0 Salir");
             System.out.print("!! Elige una opción: ");
